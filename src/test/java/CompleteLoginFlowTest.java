@@ -16,7 +16,7 @@ public class CompleteLoginFlowTest BaseTest
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(ConfigReader.getUsername(), ConfigReader.getPassword())
         Thread.sleep(3000);
-        System.out.println("✓ Logged in successfully");
+        Systemprintln("✓ Logged in successfully");
         
         // Step 2: Verify navigation to dashboard
         System.out.println("\nStep 2: Verifying dashboard...");
