@@ -7,7 +7,7 @@ import pages.DashboardPage;
 import pages.LoginPage;
 import utils.ConfigReader;
 
-public class CompleteLoginFlowTest extends BaseTest {
+public class CompleteLoginFlowTest extends BaseTest 
     
     @Test
     public void testCompleteLoginLogoutFlow() throws InterruptedException {
