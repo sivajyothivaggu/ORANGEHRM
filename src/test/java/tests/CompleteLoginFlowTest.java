@@ -7,16 +7,16 @@ import pages.DashboardPage;
 import pages.LoginPage;
 import utils.ConfigReader;
 
-public class CompleteLoginFlowTest extends BaseTest {
+public class CompleteLoginFlowTest extends BaseTest 
     
     @Test
-    public void testCompleteLoginLogoutFlow() throws InterruptedException {
+    public void testCompleteLoginLogoutFlow() throws InterruptedException 
         System.out.println("\n========== Starting Complete Login-Logout Flow ==========");
         
         // Step 1: Login with valid credentials
-        System.out.println("\nStep 1: Logging in with valid credentials...");
+        System.out.println("\nStep 1: Logging in with valid credentials...")
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.login(ConfigReader.getUsername(), ConfigReader.getPassword());
+        loginPage.login(ConfigReader.getUsername(), ConfigReader.getPassword())
         Thread.sleep(3000);
         System.out.println("✓ Logged in successfully");
         
