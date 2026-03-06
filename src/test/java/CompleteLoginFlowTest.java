@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import utils.ConfigReader;
 
-public class CompleteLoginFlowTest extends BaseTest 
+public class CompleteLoginFlowTest BaseTest 
     
     @Test
     public void testCompleteLoginLogoutFlow() throws InterruptedException 
