@@ -1,26 +1,25 @@
 package base;
 
-import constants.FrameworkConstants;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import utils.ConfigReader;
-import utils.DriverFactory;
-import java.time.Duration;
+import constants.FrameworkConstants
+import org.openqa.selenium.WebDriver
 
-public class BaseTest {
+import utils.ConfigReader
+import utils.DriverFactory
+import java.time.Duration
+
+public class BaseTest 
     
-    public WebDriver driver;
+    public WebDriver driver
     
     @BeforeMethod
-    public void setUp() {
+    public void setUp
         try {
             driver = DriverFactory.initializeDriver(ConfigReader.getBrowser());
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameworkConstants.IMPLICIT_WAIT));
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FrameworkConstants.PAGE_LOAD_TIMEOUT));
             driver.get(ConfigReader.getUrl());
             Thread.sleep(2000);
-            System.out.println("Successfully navigated to: " + ConfigReader.getUrl());
+            Systemprintln("Successfully navigated to: " + ConfigReader.getUrl());
         } catch (Exception e) {
             System.out.println("Error in setup: " + e.getMessage());
             throw new RuntimeException(e);
