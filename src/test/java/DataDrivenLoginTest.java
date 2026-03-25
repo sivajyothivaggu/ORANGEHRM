@@ -1,27 +1,23 @@
 package tests;
 
-import base.BaseTest;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import pages.DashboardPage;
-import pages.LoginPage;
 
-public class DataDrivenLoginTest extends BaseTest {
+
+public class DataDrivenLoginTest extends BaseTest 
     
     @Test
-    public void testAllLoginScenarios() throws InterruptedException {
-        Object[][] loginData = {
-            {"Admin", "admin123", "valid"},
-            {"InvalidUser", "admin123", "invalid"},
-            {"Admin", "wrongpass", "invalid"},
+    public void testAllLoginScenarios throws InterruptedException 
+        Object[ loginData  
+            {"Admin", "admin123", "valid"
+            {"InvalidUser", "admin123", "invalid
+            {"Admin", "wrongpass""invalid"},
             {"testuser", "testpass", "invalid"},
             {"Admin", "admin123", "valid"},
             {"wrongadmin", "wrongpass", "invalid"}
-        };
         
-        for (int i = 0; i < loginData.length; i++) {
-            Object[] data = loginData[i];
-            String username = (String) data[0];
+        
+        for (int i  0; i  loginData.length; i+{
+            Object[] data = loginData[i
+            String username = (String) data[0
             String password = (String) data[1];
             String expectedResult = (String) data[2];
             
